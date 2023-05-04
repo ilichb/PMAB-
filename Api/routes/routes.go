@@ -8,7 +8,7 @@ import (
 
 func MainRoute(app *fiber.App, db *sql.DB) {
 
-	users := app.Group("/api/v1/test")
-	testRoutes(users)
-
+	api := app.Group("/api/v1")
+	testRoutes(api)
+	blockchainRoutes(api)
 }
