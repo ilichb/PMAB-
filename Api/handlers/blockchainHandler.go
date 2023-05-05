@@ -9,10 +9,10 @@ import (
 /* Get test */
 
 func GetBlockchain(c *fiber.Ctx) error {
-	response, err := service.GetBlockchain()
-	if err != nil {
-		return c.SendString("Error in get")
-	}
+	response := service.GetBlockchain()
+	//if err != nil {
+	//	return c.SendString("Error in get")
+	//}
 	return c.SendString(response)
 }
 
