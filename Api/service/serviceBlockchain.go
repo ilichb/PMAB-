@@ -1,7 +1,7 @@
 package service
 
-func GetBlockchain(string, error) {
+func GetBlockchain() string {
 	response := "Get blockchain service"
 
-	return response, nil
+	return response
 }

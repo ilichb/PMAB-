@@ -1,11 +1,15 @@
 package handlers
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"PMAB-/api/service"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 /* Get test */
 
 func GetBlockchain(c *fiber.Ctx) error {
-	response, err := serviceBlockchain.GetBlockchain()
+	response, err := service.GetBlockchain()
 	if err != nil {
 		return c.SendString("Error in get")
 	}
