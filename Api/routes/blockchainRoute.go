@@ -8,8 +8,8 @@ import (
 
 func blockchainRoutes(api fiber.Router) {
 
-	api.Get("/blockchain", handlers.FindTest)
+	api.Get("/blockchain", handlers.GetBlockchain)
 
-	api.Post("/blockchain", handlers.FindTest)
+	api.Post("/blockchain", handlers.PostBlockchain)
 
 }
